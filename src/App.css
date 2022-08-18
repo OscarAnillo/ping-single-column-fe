@@ -91,3 +91,12 @@
   font-size: 10px;
   font-weight: 300;
 }
+
+.error {
+  color: red;
+  font-style: italic;
+  position: relative;
+  top: -10px;
+  font-weight: 700;
+  font-size: 12px;
+}
