@@ -19,7 +19,7 @@
 /* Text component */
 .text {
   width: 90%;
-  margin: auto;
+  margin: 0 auto 4em auto;
 }
 .text img {
   padding-bottom: 40px;
@@ -39,7 +39,8 @@
 .text div p {
   color: hsl(209, 33%, 12%);
   font-size: 12px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
+  font-weight: 600;
 }
 
 .text form input {
@@ -64,9 +65,29 @@
   color: #fff;
 }
 
+/* Image component */
 .img-bg {
   background-image: url(/public/images/illustration-dashboard.png);
   background-size: contain;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 230px;
+  margin-bottom: 100px;
+}
+
+/* Social component */
+.socials {
+  color: hsl(223, 87%, 63%);
+}
+
+.fa, .tr, .ig {
+  border: 1px solid hsl(223, 100%, 88%);
+  padding: 10px 10px;
+  border-radius: 20px;
+  margin: 0 .5em 2em .5em;
+}
+
+.socials div p {
+  color: hsl(0, 0%, 59%);
+  font-size: 10px;
+  font-weight: 300;
 }
