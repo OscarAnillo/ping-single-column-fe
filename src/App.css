@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +8,60 @@
 .App {
   text-align: center;
   height: 100vh;
+  font-family: 'Libre Franklin', sans-serif;
   position: relative;
 }
 .container {
   width: 90%;
   margin: 100px auto;
+}
+
+/* Text component */
+.text {
+  width: 90%;
+  margin: auto;
+}
+.text img {
+  padding-bottom: 40px;
+}
+.text div h1 {
+  font-weight: 300;
+  color: hsl(0, 0%, 59%);
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+}
+
+.text div span {
+  font-weight: 700;
+  color: hsl(209, 33%, 12%);
+  letter-spacing: 0px;
+}
+.text div p {
+  color: hsl(209, 33%, 12%);
+  font-size: 12px;
+  padding-bottom: 40px;
+}
+
+.text form input {
+  width: 90%;
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 20px;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.text form input::placeholder {
+  color: hsl(223, 100%, 88%);
+  padding: 0 1em;
+}
+
+.text form button {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 1em;
+  background-color: hsl(223, 87%, 63%);
+  color: #fff;
 }
 
 .img-bg {

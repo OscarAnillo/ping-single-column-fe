@@ -1,8 +1,8 @@
-
-import './App.css';
 import ImageComponent from './components/image-component';
 import SocialsComponent from './components/socials-component';
 import TextComponent from './components/text-component';
+
+import './App.css';
 
 function App() {
   return (

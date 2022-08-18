@@ -12,3 +12,5 @@ export default function SocialsComponent(){
         </div>
     )
 }
+
+

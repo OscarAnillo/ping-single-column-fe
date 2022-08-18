@@ -7,7 +7,7 @@ export default function TextComponent(){
                 <p>Subscribe and get notified</p>
             </div>
             <form>
-                <input type="text" placeholder="Your email address" />
+                <input type="text" placeholder="Your email address..." />
                 <button>Notify Me</button>
             </form>
         </section>
