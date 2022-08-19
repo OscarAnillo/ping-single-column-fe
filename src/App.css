@@ -10,9 +10,11 @@
   height: 100vh;
   font-family: 'Libre Franklin', sans-serif;
   position: relative;
+  overflow: hidden;
 }
 .container {
   width: 90%;
+  max-width: 375px;
   margin: 100px auto;
 }
 
@@ -65,6 +67,10 @@
   color: #fff;
 }
 
+.text .inputError {
+  border: 1px solid red;
+}
+
 /* Image component */
 .img-bg {
   background-image: url(/public/images/illustration-dashboard.png);
@@ -93,10 +99,91 @@
 }
 
 .error {
-  color: red;
+  color: hsl(354, 100%, 66%);
   font-style: italic;
   position: relative;
   top: -10px;
   font-weight: 700;
   font-size: 12px;
+}
+
+@media(min-width: 1000px){
+  .container {
+    width: 90%;
+    max-width: 770px;
+    margin: 60px auto;
+  }
+  
+  /* Text component */  
+  .text {
+    width: 90%;
+    position: relative;
+  }
+
+  .text div h1 {
+    font-size: 3rem;
+  }
+
+  .text div p {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .text form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .text form input {
+    width: 70%;
+    padding: 1.5em;
+    border-radius: 30px;
+    margin-bottom: 0;
+  }
+
+  .text form button {
+    width: 30%;
+    margin-left: 1em;
+    padding: 1.5em;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: all .3s ease;
+  }
+
+  .text form button:hover {
+    cursor: pointer;
+    background-color: hsl(209, 33%, 12%);
+  }
+  
+  .text .inputError {
+    border: 1px solid hsl(354, 100%, 66%);
+  }
+  
+  /* Image component */
+  .img-bg {
+    background-image: url(/public/images/illustration-dashboard.png);
+    background-size: cover;
+    height: 470px;
+    margin-bottom: 40px;
+  }
+  
+  /* Social component */
+  .fa, .tr, .ig {
+    margin: 0 .5em .8em .5em;
+  }
+  
+  .socials div p {
+    font-size: 12px; 
+  }
+  
+  .error {
+    color: hsl(354, 100%, 66%);
+    font-style: italic;
+    position: absolute;
+    top: 260px;
+    left: 20px;
+    font-weight: 700;
+    font-size: 16px;
+  }
 }

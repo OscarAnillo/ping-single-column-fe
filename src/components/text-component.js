@@ -4,6 +4,7 @@ export default function TextComponent(){
     const [emailInput, setEmailInput] = useState({ email: ''});
     const [formErrors, setFormErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
     const changeHandler = (e) => {
         const {name, value} = e.target;
@@ -16,20 +17,21 @@ export default function TextComponent(){
 
     const validateEmail = (value) => {
         const error = {};
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
         if(!value.email){
             error.email = "An email is required";
         } else if(!emailRegex.test(value.email)) {
             error.email = "Please provide a valid email address"
-        } else {
-            error.email = "Thank You! You'll be notified!"
-        }
+        } 
         return error;
     }   
 
     const submitHandler = (e) => {
         e.preventDefault();
+        if(emailRegex.test(emailInput.email)){
+            alert(`We'll send an email to ${emailInput.email}`);
+            setEmailInput({ email: ''})
+        }
         setFormErrors(validateEmail(emailInput));
         setIsSubmitted(true);
     }
@@ -48,7 +50,7 @@ export default function TextComponent(){
                 <p>Subscribe and get notified</p>
             </div>
             <form onSubmit={submitHandler}>
-                <input type="text" placeholder="Your email address..." value={emailInput.email} name="email" onChange={changeHandler}/>
+                <input type="text" placeholder="Your email address..." value={emailInput.email} name="email" onChange={changeHandler} className={formErrors.email ? 'inputError' : ''}/>
                 {<span className="error">{formErrors.email}</span>}
                 <button>Notify Me</button>
             </form>
