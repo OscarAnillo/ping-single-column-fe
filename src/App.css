@@ -181,9 +181,15 @@
     color: hsl(354, 100%, 66%);
     font-style: italic;
     position: absolute;
-    top: 260px;
+    top: 55px;
     left: 20px;
     font-weight: 700;
     font-size: 16px;
+  }
+  .error .icon {
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+    left: 5px;
   }
 }

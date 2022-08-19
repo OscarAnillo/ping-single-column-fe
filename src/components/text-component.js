@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import { GoOctoface } from 'react-icons/go';
+import 'animate.css';
 
 export default function TextComponent(){
     const [emailInput, setEmailInput] = useState({ email: ''});
@@ -44,14 +46,14 @@ export default function TextComponent(){
 
     return (
         <section className="text">
-            <img src="/images/logo.svg" alt="" />
-            <div>
+            <img src="/images/logo.svg" alt="" className="animate__animated animate__rubberBand"/>
+            <div className="animate__animated animate__fadeInRight">
                 <h1>We are launching <span>soon!</span></h1>
                 <p>Subscribe and get notified</p>
             </div>
-            <form onSubmit={submitHandler}>
+            <form onSubmit={submitHandler} className="animate__animated animate__fadeInLeft">
                 <input type="text" placeholder="Your email address..." value={emailInput.email} name="email" onChange={changeHandler} className={formErrors.email ? 'inputError' : ''}/>
-                {<span className="error">{formErrors.email}</span>}
+                {formErrors.email && <span className="error">{formErrors.email} <GoOctoface className="icon"/> </span>}
                 <button>Notify Me</button>
             </form>
         </section>

@@ -2,7 +2,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 
 export default function SocialsComponent(){
     return (
-        <div className='socials'>
+        <div className='socials animate__animated animate__fadeInUpBig'>
             <FaFacebook className='fa' />
             <FaTwitter className='tr' />
             <FaInstagram className='ig'/>
