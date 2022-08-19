@@ -108,6 +108,11 @@
 }
 
 @media(min-width: 1000px){
+  .App {
+    background-image: url('https://flevix.com/wp-content/uploads/2019/12/Live-Background-1.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .container {
     width: 90%;
     max-width: 770px;
@@ -122,6 +127,7 @@
 
   .text div h1 {
     font-size: 3rem;
+    text-shadow: 1px 1px 1px hsl(209, 33%, 12%);
   }
 
   .text div p {
